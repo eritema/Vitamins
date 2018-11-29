@@ -19,7 +19,7 @@ android {
     defaultConfig {
         applicationId "consumerphysics.com.myscioapplication"
         minSdkVersion 18
-        targetSdkVersion 22
+        targetSdkVersion 26
     }
 
     buildTypes {
