@@ -6,4 +6,19 @@
     <string name="title_activity_collection">CollectionActivity</string>
     <string name="title_activity_model">ModelActivity</string>
     <string name="select_model_title">Select Model</string>
+    <string name="main_name">VitaminTest Application</string>
+    <!-- Analysis strings -->
+    <string name="login_button">LOGIN</string>
+    <string name="logout_button">LOGOUT</string>
+    <string name="analyze_button">ANALYZE SUBSTANCE</string>
+    <string name="select_button">SELECT ANALYSIS MODEL</string>
+
+
+    <!-- Controls strings -->
+    <string name="discover_button">SCIO?</string>
+    <string name="connect_button">CONNECT THE SPECTROMETER</string>
+    <string name="calibrate_button">CALIBRATE</string>
+    <string name="is_calibrate_button">CALIBRATION?</string>
+    <string name="read_bat_button">BATTERY STATUS</string>
+    <string name="disconnet_button">DISCONNECT</string>
 </resources>

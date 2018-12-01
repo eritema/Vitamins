@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".activities.MainActivity">
 
         <LinearLayout
@@ -21,24 +21,45 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingBottom="@dimen/activity_vertical_margin">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="VitaminTest Application"
-                android:textColor="#000"
-                android:textSize="22dp" />
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="false"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_action_name" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/main_name"
+                    android:textColor="#000"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
 
             <ScrollView
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_below="@+id/textView">
+                android:layout_height="fill_parent">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Space
@@ -53,29 +74,34 @@
                         android:padding="@dimen/element_padding">
 
                         <LinearLayout
+                            style="@android:style/ButtonBar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <Button
                                 android:id="@+id/button"
+                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="5dp"
                                 android:layout_weight="1"
+                                android:background="@color/button_material_dark"
                                 android:onClick="doLogin"
-                                android:text="LOGIN"
+                                android:text="@string/login_button"
                                 android:textColor="@android:color/holo_green_dark" />
 
                             <Button
                                 android:id="@+id/buttonLogout"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignBaseline="@+id/button"
                                 android:layout_toRightOf="@+id/button"
                                 android:layout_weight="1"
+                                android:background="@color/button_material_dark"
                                 android:onClick="doLogout"
-                                android:text="LOGOUT"
+                                android:text="@string/logout_button"
                                 android:textColor="@color/red" />
 
                         </LinearLayout>
@@ -87,11 +113,13 @@
 
                             <Button
                                 android:id="@+id/button_analyze"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:background="@color/background_material_light"
                                 android:onClick="doAnalyze"
-                                android:text="Analyze Vitamin" />
+                                android:text="@string/analyze_button" />
 
                         </LinearLayout>
 
@@ -102,12 +130,14 @@
 
                             <Button
                                 android:id="@+id/button_models"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/button"
                                 android:layout_weight="1"
+                                android:background="@color/background_material_light"
                                 android:onClick="doModels"
-                                android:text="Select Vitamin" />
+                                android:text="@string/select_button" />
 
                         </LinearLayout>
 
@@ -187,46 +217,69 @@
 
                             <Button
                                 android:id="@+id/button_discover"
-                                android:layout_width="wrap_content"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="111dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="5dp"
                                 android:layout_weight="1"
                                 android:onClick="doDiscover"
-                                android:text="Discover" />
+                                android:text="@string/discover_button" />
+
+                            <Button
+                                android:id="@+id/button_disconnect"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:onClick="doDisconnect"
+                                android:text="@string/disconnet_button"
+                                android:textColor="@color/red" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
 
                             <Button
                                 android:id="@+id/button_connect"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="5dp"
                                 android:layout_weight="1"
+                                android:background="@color/grey"
                                 android:onClick="doConnect"
-                                android:text="Connect" />
+                                android:text="@string/connect_button"
+                                android:textColor="@android:color/holo_green_dark" />
+
 
                         </LinearLayout>
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button_calibrate"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="5dp"
-                                android:layout_weight="1"
-                                android:onClick="doCalibrate"
-                                android:text="Calibrate" />
-
-                            <Button
                                 android:id="@+id/button_is_calibrate"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="5dp"
                                 android:layout_weight="1"
                                 android:onClick="checkCalibration"
-                                android:text="Is Calibration Needed" />
+                                android:text="@string/is_calibrate_button" />
+
+                            <Button
+                                android:id="@+id/button_calibrate"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:onClick="doCalibrate"
+                                android:text="@string/calibrate_button" />
 
                         </LinearLayout>
 
@@ -237,29 +290,16 @@
 
                             <Button
                                 android:id="@+id/button_read_battery"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:onClick="readBattery"
-                                android:text="Read Battery" />
+                                android:text="@string/read_bat_button" />
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
 
-                            <Button
-                                android:id="@+id/button_disconnect"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:onClick="doDisconnect"
-                                android:text="Disconnect" />
-
-
-                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -336,19 +376,6 @@
             </ScrollView>
 
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="334dp"
-            android:layout_height="516dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="right"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="0dp"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:scaleType="fitStart"
-            android:src="@drawable/ic_action_name" />
 
     </RelativeLayout>
 
