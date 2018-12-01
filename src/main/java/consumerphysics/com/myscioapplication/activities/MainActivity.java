@@ -58,8 +58,8 @@ public final class MainActivity extends BaseScioActivity {
     private TextView statusTextView;
     private TextView usernameTextView;
     private TextView modelTextView;
-    private TextView version;
-    private TextView statusSensorTextView;
+    //private TextView version;
+    //private TextView statusSensorTextView;
     private ProgressDialog progressDialog;
 
     // Members
@@ -788,23 +788,23 @@ public final class MainActivity extends BaseScioActivity {
         addressTextView = (TextView) findViewById(R.id.tv_scio_address);
         statusTextView = (TextView) findViewById(R.id.tv_scio_status);
         usernameTextView = (TextView) findViewById(R.id.tv_username);
-        statusSensorTextView = (TextView) findViewById(R.id.tv_scio_status_sensor);
+        //statusSensorTextView = (TextView) findViewById(R.id.tv_scio_status_sensor);
         modelTextView = (TextView) findViewById(R.id.tv_model);
-        version = (TextView) findViewById(R.id.version);
+        //version = (TextView) findViewById(R.id.version);
 
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-            version.setText("v" + pInfo.versionName);
+            //version.setText("v" + pInfo.versionName);
         }
         catch (PackageManager.NameNotFoundException e) {
         }
 
-        if (isScioSensorAvailable()) {
+        /*if (isScioSensorAvailable()) {
             statusSensorTextView.setText("Available");
         }
         else {
             statusSensorTextView.setText("Not Available");
-        }
+        }*/
     }
 
     private void storeUsername(final String username) {

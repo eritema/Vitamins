@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Scio SDK Example</string>
+    <string name="app_name">VitaminsTests</string>
 
     <string name="title_activity_scan">ScanActivity</string>
     <string name="title_activity_discover">DiscoverActivity</string>
