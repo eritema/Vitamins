@@ -5,6 +5,7 @@
     <string name="title_activity_discover">DiscoverActivity</string>
     <string name="title_activity_collection">CollectionActivity</string>
     <string name="title_activity_model">ModelActivity</string>
+    <string name="title_activity_info">Device Information</string>
     <string name="select_model_title">Select Model</string>
     <string name="main_name">VitaminTest Application</string>
     <!-- Analysis strings -->
@@ -21,4 +22,14 @@
     <string name="is_calibrate_button">CALIBRATION?</string>
     <string name="read_bat_button">BATTERY STATUS</string>
     <string name="disconnet_button">DISCONNECT</string>
+    <string name="info_button">INFO</string>
+
+    <!-- Test strings -->
+    <string name="deviceName">Spectrophotometer</string>
+    <string name="deviceAddress">Address</string>
+    <string name="username">DRM</string>
+    <string name="modelName">MODELS</string>
+    <string name="modelId">MID</string>
+
+
 </resources>

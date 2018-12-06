@@ -27,7 +27,8 @@ import consumerphysics.com.myscioapplication.config.Constants;
 import consumerphysics.com.myscioapplication.storage.ScanStorage;
 
 /**
- * Created by nadavg on 19/07/2016.
+ * Created by nadavg on 19/07/2016
+ * Modified by drManhattan 23/11/2018
  */
 public class MultiScanningActivity extends BaseScioActivity {
 

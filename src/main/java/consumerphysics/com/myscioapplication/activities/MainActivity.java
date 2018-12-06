@@ -45,11 +45,8 @@ public final class MainActivity extends BaseScioActivity {
 
     private final static int LOGIN_ACTIVITY_RESULT = 1000;
 
-    // TODO: Put your redirect url here!
     private static final String REDIRECT_URL = "http://144.76.34.104";
-    //private static final String REDIRECT_URL = "http://8.8.8.8";
 
-    // TODO: Put your app key here!
     private static final String APPLICATION_KEY = "31a0075b-f878-4744-be37-4e655695a337";
 
     // UI
@@ -814,12 +811,18 @@ public final class MainActivity extends BaseScioActivity {
 
     private void updateDisplay() {
         final SharedPreferences pref = getSharedPreferences();
-
-        deviceName = pref.getString(Constants.SCIO_NAME, null);
-        deviceAddress = pref.getString(Constants.SCIO_ADDRESS, null);
-        username = pref.getString(Constants.USER_NAME, null);
-        modelName = pref.getString(Constants.MODEL_NAME, null);
-        modelId = pref.getString(Constants.MODEL_ID, null);
+        //TODO move the next values to the Activity info
+        //deviceName = pref.getString(Constants.SCIO_NAME, null);
+        //deviceAddress = pref.getString(Constants.SCIO_ADDRESS, null);
+        //username = pref.getString(Constants.USER_NAME, null);
+        //modelName = pref.getString(Constants.MODEL_NAME, null);
+        //modelId = pref.getString(Constants.MODEL_ID, null);
+        //TODO remove these test strings
+        deviceName = getString(R.string.deviceName);
+        deviceAddress = getString(R.string.deviceAddress);
+        username = getString(R.string.username);
+        modelName = getString(R.string.modelName);
+        modelId = getString(R.string.modelId);
 
         nameTextView.setText(deviceName);
         addressTextView.setText(deviceAddress);
