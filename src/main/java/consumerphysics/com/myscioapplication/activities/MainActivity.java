@@ -65,6 +65,11 @@ public final class MainActivity extends BaseScioActivity {
     private String username;
     private String modelId;
     private String modelName;
+    private String deviceNameTxt;
+    private String deviceAddressTxt;
+    private String usernameTxt;
+    //private String modelIdTxt;
+    private String modelNameTxt;
 
     // SCiO
     private ScioReading scan;
@@ -812,22 +817,22 @@ public final class MainActivity extends BaseScioActivity {
     private void updateDisplay() {
         final SharedPreferences pref = getSharedPreferences();
         //TODO move the next values to the Activity info
-        //deviceName = pref.getString(Constants.SCIO_NAME, null);
-        //deviceAddress = pref.getString(Constants.SCIO_ADDRESS, null);
-        //username = pref.getString(Constants.USER_NAME, null);
-        //modelName = pref.getString(Constants.MODEL_NAME, null);
-        //modelId = pref.getString(Constants.MODEL_ID, null);
+        deviceName = pref.getString(Constants.SCIO_NAME, null);
+        deviceAddress = pref.getString(Constants.SCIO_ADDRESS, null);
+        username = pref.getString(Constants.USER_NAME, null);
+        modelName = pref.getString(Constants.MODEL_NAME, null);
+        modelId = pref.getString(Constants.MODEL_ID, null);
         //TODO remove these test strings
-        deviceName = getString(R.string.deviceName);
-        deviceAddress = getString(R.string.deviceAddress);
-        username = getString(R.string.username);
-        modelName = getString(R.string.modelName);
-        modelId = getString(R.string.modelId);
+        deviceNameTxt = getString(R.string.deviceName);
+        deviceAddressTxt = getString(R.string.deviceAddress);
+        usernameTxt = getString(R.string.username);
+        modelNameTxt = getString(R.string.modelName);
+        //modelIdTxt = getString(R.string.modelId);
 
-        nameTextView.setText(deviceName);
-        addressTextView.setText(deviceAddress);
-        usernameTextView.setText(username);
-        modelTextView.setText(modelName);
+        nameTextView.setText(deviceNameTxt);
+        addressTextView.setText(deviceAddressTxt);
+        usernameTextView.setText(usernameTxt);
+        modelTextView.setText(modelNameTxt);
 
         if (!isDeviceConnected()) {
             statusTextView.setText("Disconnected");
